@@ -86,7 +86,7 @@ class NseIndia(Selenium):
         '''Парсим данные и заносим их в csv таблицу'''
         soup = bs(source, 'html.parser')
         names = soup.find_all(class_='symbol-word-break')
-        prices = soup.find_all(class_='bold text-right')[1:]
+        prices = soup.find_all(class_='bold text-right')[2:]
 
         with open('output.csv', 'w', newline='') as csvfile:
             fieldnames = ['Name', 'Price']
