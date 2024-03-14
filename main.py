@@ -47,7 +47,7 @@ class Selenium:
         self.driver.get(url)
 
     def hover(self, path, timeout=20, delay=0):
-        '''Функция новедения курсора на элемент'''
+        '''Функция наведения курсора на элемент'''
         action = ActionChains(self.driver)
         element = WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.XPATH, path)))
         time.sleep(delay)
